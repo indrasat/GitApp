@@ -10,22 +10,31 @@ import Combine
 
 final class UsersListViewModel: ObservableObject {
     
-    @Published private(set) var users: [String] = []
-    @Published private(set) var errorMessage: String?
-    @Published private(set) var isLoading = false
+    private var cancellables = Set<AnyCancellable>()
+    private let fetchUsersListUseCase: FetchUsersListUseCase
     
-    init (users: [String], isLoading: Bool = false) {
-        self.users = users
-        self.isLoading = isLoading
+    @Published var users: [User] = []
+    @Published var errorMessage: String?
+    @Published var isLoading = false
+    
+    init(fetchUsersListUseCase: FetchUsersListUseCase) {
+        self.fetchUsersListUseCase = fetchUsersListUseCase
     }
     
     func fetchUsers() {
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.isLoading = false
-            if self.users.isEmpty {
-                self.errorMessage = "Failed to fetch users"
-            }
-        }
+        fetchUsersListUseCase.execute()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    self.errorMessage = error.localizedDescription
+                case .finished:
+                    break
+                }
+            }, receiveValue: { users in
+                self.users = users
+                self.isLoading = false
+            })
+            .store(in: &cancellables)
     }
 }
