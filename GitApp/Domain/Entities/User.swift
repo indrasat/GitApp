@@ -8,27 +8,30 @@
 import Foundation
 
 struct User: Codable {
-    let login: String
-    let id: Int
-    let nodeID: String
-    let avatarURL: URL
-    let gravatarID: String
-    let url: URL
-    let htmlURL: URL
-    let followersURL: URL
-    let followingURL: String
-    let gistsURL: String
-    let starredURL: String
-    let subscriptionsURL: URL
-    let organizationsURL: URL
-    let reposURL: URL
-    let eventsURL: String
-    let receivedEventsURL: URL
-    let type: String
-    let siteAdmin: Bool
+    var name: String?
+    var email: String?
+    var login: String
+    var id: Int
+    var nodeID: String
+    var avatarURL: String
+    var gravatarID: String?
+    var url: String
+    var htmlURL: String
+    var followersURL: String
+    var followingURL: String
+    var gistsURL: String
+    var starredURL: String
+    var subscriptionsURL: String
+    var organizationsURL: String
+    var reposURL: String
+    var eventsURL: String
+    var receivedEventsURL: String
+    var type: String
+    var siteAdmin: Bool
+    var starredAt: String?
 
     enum CodingKeys: String, CodingKey {
-        case login, id, type, siteAdmin
+        case name, email, login, id
         case nodeID = "node_id"
         case avatarURL = "avatar_url"
         case gravatarID = "gravatar_id"
@@ -43,5 +46,9 @@ struct User: Codable {
         case reposURL = "repos_url"
         case eventsURL = "events_url"
         case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+        case starredAt = "starred_at"
     }
 }
+

@@ -49,19 +49,19 @@ class UsersListUseCaseTest: XCTestCase {
     }
 
     func testFetchUsersFailure() {
-        let error = NSError(domain: "TestError", code: 0, userInfo: nil)
-        let repository = MockUsersListRepository(result: .failure(NSError(domain: "", code: 0, userInfo: nil) as! MoyaError))
-        let useCase = FetchUsersListUseCase(repository: repository)
-
         let expectation = XCTestExpectation(description: "Failed to fetch users")
+        
+        let mockError = MoyaError.statusCode(Response(statusCode: 404, data: Data()))
+        let repository = MockUsersListRepository(result: .failure(mockError))
+        let useCase = FetchUsersListUseCase(repository: repository)
 
         useCase.execute()
             .sink(receiveCompletion: { completion in
-                if case let .failure(receivedError as NSError) = completion {
-                    XCTAssertEqual(receivedError, error, "Error should match")
+                if case let .failure(receivedError) = completion, case let MoyaError.statusCode(response) = receivedError {
+                    XCTAssertEqual(response.statusCode, 404, "Status code should be 404")
                     expectation.fulfill()
                 } else {
-                    XCTFail("Expected failure but received success")
+                    XCTFail("Expected failure with specific MoyaError but received different error or success")
                 }
             }, receiveValue: { _ in
                 XCTFail("Expected no users but received some")

@@ -23,9 +23,16 @@
 		A94CA3182B4FBCA800FBECAB /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F559DB2B4F9DAF005532CE /* UsersListViewModel.swift */; };
 		A94CA3192B4FBEE500FBECAB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CA3112B4FB3CD00FBECAB /* UserService.swift */; };
 		A94CA31A2B4FBEE800FBECAB /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CA30F2B4FB2E600FBECAB /* UserAPI.swift */; };
+		A94CA31C2B4FEFFD00FBECAB /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CA31B2B4FEFFD00FBECAB /* UserListViewController.swift */; };
+		A94CA3212B4FF89000FBECAB /* UserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CA3202B4FF89000FBECAB /* UserViewCell.swift */; };
+		A97558262B50093E00368FD0 /* DownloadImageUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97558252B50093E00368FD0 /* DownloadImageUseCaseTests.swift */; };
+		A975582B2B5009E700368FD0 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975582A2B5009E700368FD0 /* ImageService.swift */; };
+		A975582D2B500AD900368FD0 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975582C2B500AD900368FD0 /* ImageRepository.swift */; };
+		A975582F2B500BB900368FD0 /* ImageDownloadUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975582E2B500BB900368FD0 /* ImageDownloadUseCase.swift */; };
+		A97558332B5020DD00368FD0 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97558322B5020DD00368FD0 /* UserCell.xib */; };
+		A9F0B8FC2B56B40F00B5F011 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F0B8FB2B56B40F00B5F011 /* AppFlowCoordinator.swift */; };
 		A9F5599C2B4F9076005532CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5599B2B4F9076005532CE /* AppDelegate.swift */; };
 		A9F5599E2B4F9076005532CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5599D2B4F9076005532CE /* SceneDelegate.swift */; };
-		A9F559A02B4F9076005532CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5599F2B4F9076005532CE /* ViewController.swift */; };
 		A9F559A32B4F9076005532CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F559A12B4F9076005532CE /* Main.storyboard */; };
 		A9F559A52B4F907F005532CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F559A42B4F907F005532CE /* Assets.xcassets */; };
 		A9F559A82B4F907F005532CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F559A62B4F907F005532CE /* LaunchScreen.storyboard */; };
@@ -69,10 +76,17 @@
 		A94CA30F2B4FB2E600FBECAB /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		A94CA3112B4FB3CD00FBECAB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A94CA3142B4FB4EE00FBECAB /* MockUsersListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersListRepository.swift; sourceTree = "<group>"; };
+		A94CA31B2B4FEFFD00FBECAB /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		A94CA3202B4FF89000FBECAB /* UserViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewCell.swift; sourceTree = "<group>"; };
+		A97558252B50093E00368FD0 /* DownloadImageUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageUseCaseTests.swift; sourceTree = "<group>"; };
+		A975582A2B5009E700368FD0 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		A975582C2B500AD900368FD0 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		A975582E2B500BB900368FD0 /* ImageDownloadUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadUseCase.swift; sourceTree = "<group>"; };
+		A97558322B5020DD00368FD0 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		A9F0B8FB2B56B40F00B5F011 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		A9F559982B4F9076005532CE /* GitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F5599B2B4F9076005532CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F5599D2B4F9076005532CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A9F5599F2B4F9076005532CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9F559A22B4F9076005532CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9F559A42B4F907F005532CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9F559A72B4F907F005532CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				A94CA30C2B4FB24200FBECAB /* FetchUsersListUseCase.swift */,
+				A975582E2B500BB900368FD0 /* ImageDownloadUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -191,6 +206,8 @@
 			children = (
 				A94CA30F2B4FB2E600FBECAB /* UserAPI.swift */,
 				A94CA3112B4FB3CD00FBECAB /* UserService.swift */,
+				A975582A2B5009E700368FD0 /* ImageService.swift */,
+				A975582C2B500AD900368FD0 /* ImageRepository.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -201,6 +218,23 @@
 				A94CA3142B4FB4EE00FBECAB /* MockUsersListRepository.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A94CA31F2B4FF85D00FBECAB /* UserListCell */ = {
+			isa = PBXGroup;
+			children = (
+				A94CA3202B4FF89000FBECAB /* UserViewCell.swift */,
+				A97558322B5020DD00368FD0 /* UserCell.xib */,
+			);
+			path = UserListCell;
+			sourceTree = "<group>";
+		};
+		A97558242B50092000368FD0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A97558252B50093E00368FD0 /* DownloadImageUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		A9F5598F2B4F9076005532CE = {
@@ -233,7 +267,6 @@
 				A94CA3062B4FB0AC00FBECAB /* Data */,
 				A9F559CF2B4F9972005532CE /* Presentation */,
 				A9F559D32B4F9A03005532CE /* Resources */,
-				A9F5599F2B4F9076005532CE /* ViewController.swift */,
 			);
 			path = GitApp;
 			sourceTree = "<group>";
@@ -241,6 +274,7 @@
 		A9F559B12B4F9080005532CE /* GitAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A97558242B50092000368FD0 /* UseCases */,
 				A94CA2FF2B4FAB4400FBECAB /* Domain */,
 				A94CA2F82B4FA94900FBECAB /* Stubs */,
 				A9F559D42B4F9A5E005532CE /* Presentation */,
@@ -262,6 +296,7 @@
 			children = (
 				A9F5599B2B4F9076005532CE /* AppDelegate.swift */,
 				A9F5599D2B4F9076005532CE /* SceneDelegate.swift */,
+				A9F0B8FB2B56B40F00B5F011 /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -346,6 +381,8 @@
 		A9F559DA2B4F9D89005532CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A94CA31F2B4FF85D00FBECAB /* UserListCell */,
+				A94CA31B2B4FEFFD00FBECAB /* UserListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97558332B5020DD00368FD0 /* UserCell.xib in Resources */,
 				A9F559A82B4F907F005532CE /* LaunchScreen.storyboard in Resources */,
 				A9F559A52B4F907F005532CE /* Assets.xcassets in Resources */,
 				A9F559A32B4F9076005532CE /* Main.storyboard in Resources */,
@@ -640,15 +678,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9F559A02B4F9076005532CE /* ViewController.swift in Sources */,
 				A94CA3102B4FB2E600FBECAB /* UserAPI.swift in Sources */,
 				A94CA3122B4FB3CD00FBECAB /* UserService.swift in Sources */,
 				A9F559DC2B4F9DAF005532CE /* UsersListViewModel.swift in Sources */,
 				A94CA30D2B4FB24200FBECAB /* FetchUsersListUseCase.swift in Sources */,
+				A975582B2B5009E700368FD0 /* ImageService.swift in Sources */,
+				A94CA31C2B4FEFFD00FBECAB /* UserListViewController.swift in Sources */,
+				A9F0B8FC2B56B40F00B5F011 /* AppFlowCoordinator.swift in Sources */,
+				A975582D2B500AD900368FD0 /* ImageRepository.swift in Sources */,
 				A94CA30A2B4FB18E00FBECAB /* DefaultUsersListRepository.swift in Sources */,
 				A9F5599C2B4F9076005532CE /* AppDelegate.swift in Sources */,
 				A94CA2FD2B4FAA1500FBECAB /* User.swift in Sources */,
 				A9F5599E2B4F9076005532CE /* SceneDelegate.swift in Sources */,
+				A94CA3212B4FF89000FBECAB /* UserViewCell.swift in Sources */,
+				A975582F2B500BB900368FD0 /* ImageDownloadUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +705,7 @@
 				A94CA31A2B4FBEE800FBECAB /* UserAPI.swift in Sources */,
 				A94CA3172B4FBC9C00FBECAB /* FetchUsersListUseCase.swift in Sources */,
 				A94CA3162B4FB7F200FBECAB /* DefaultUsersListRepository.swift in Sources */,
+				A97558262B50093E00368FD0 /* DownloadImageUseCaseTests.swift in Sources */,
 				A94CA3012B4FAB5A00FBECAB /* UsersListUseCaseTest.swift in Sources */,
 				A94CA3182B4FBCA800FBECAB /* UsersListViewModel.swift in Sources */,
 				A9F559D72B4F9AF7005532CE /* UserListViewModelTests.swift in Sources */,

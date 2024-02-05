@@ -38,6 +38,10 @@ extension UserAPI: TargetType {
     }
 
     var headers: [String: String]? {
-        return ["Content-type": "application/json"]
+        return [
+                "Accept": "application/vnd.github+json",
+                "Authorization": "Bearer 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",
+                "X-GitHub-Api-Version": "2022-11-28"
+            ]
     }
 }

@@ -49,7 +49,8 @@ final class UserListViewModelTests: XCTestCase {
     func testWhenFetchUserFailed() {
         let expectation = self.expectation(description: "Fetch users successfully")
         let mockUsers = [User.stub()]
-        let repository = MockUsersListRepository(result: .failure(NSError(domain: "", code: 0, userInfo: nil) as! MoyaError ))
+        let mockError = MoyaError.statusCode(Response(statusCode: 404, data: Data()))
+        let repository = MockUsersListRepository(result: .failure(mockError))
         let useCase = FetchUsersListUseCase(repository: repository)
         
         viewModel = UsersListViewModel(fetchUsersListUseCase: useCase)
@@ -110,7 +111,8 @@ final class UserListViewModelTests: XCTestCase {
     func testWhenLoadingIsFalse() {
         let expectation = self.expectation(description: "Fetch users successfully")
         let mockUsers = [User.stub()]
-        let repository = MockUsersListRepository(result: .failure(NSError(domain: "", code: 0, userInfo: nil) as! MoyaError ))
+        let mockError = MoyaError.statusCode(Response(statusCode: 404, data: Data()))
+        let repository = MockUsersListRepository(result: .failure(mockError))
         let useCase = FetchUsersListUseCase(repository: repository)
         
         viewModel = UsersListViewModel(fetchUsersListUseCase: useCase)
